@@ -9,6 +9,18 @@
 </head>
 <body>
 
+    <section class="section1" style="display: block;">
+
+    <div id="button">
+        <button class="button"><p>Play</p></button>
+    </div>
+
+    <div class="hangman">
+        <img src="./assets/hangman.jpg" alt="" style="height: auto; width: 30%;">
+    </div>
+</section>
+
+<section class="section2" style="display: none;">
 <div class="game">
     <div class="word"></div>
 
@@ -19,6 +31,7 @@
         <div class="leftarm"></div>
         <div class="rightleg"></div>
         <div class="leftleg"></div> -->
+        <div class="help">Help Me!</div> 
         <div class="standleg"
         data-value="stable"></div>
         <div class="standarm"
@@ -32,6 +45,10 @@
 </div>
 
 <div class="board"></div>
+</section>
+
+<audio id="marioRunning" src="./assets/music/01 Running About.mp3" style="visibility: hidden;"></audio>
+
    <script src="./game.js" ></script>
 </body>
 </html>
