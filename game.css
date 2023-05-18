@@ -10,7 +10,7 @@ font-size:1.4rem ;
 }
 
 .firstPage{
-    background-image: url("/assets/img/board.jpg") ;
+    background-image: url("./assets/istockphoto-165812595-612x612.jpg") ;
     background-size: 110% 115%;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,17 +20,54 @@ font-size:1.4rem ;
 #button {
     display: flex;
     justify-content: center;
-    margin-top: 6%;
+    margin-bottom: 4%;
+    
 }
 .button {
+    
+    font-size: 2rem;
+    color: rgb(129, 112, 35);
     background-color: transparent;
     border: none;
     cursor:pointer;
+    font-style: italic;
+
 }
+
+.button:hover {
+color: rgb(89, 54, 54);
+background-color: rgb(175, 197, 130);
+width: 7rem;
+box-shadow: 2px 5px rgb(149, 132, 132);
+}
+
+h1 {
+display: flex;
+justify-content: center;
+align-items: center;
+color: rgb(68, 116, 68);
+margin: 20px;
+font-style: italic;
+font-size: 3rem;
+}
+
+h2 {
+display: flex;
+justify-content: center;
+align-items: center;
+color: rgb(68, 116, 68);
+margin: 20px;
+font-style: italic;
+font-size: 1.5rem;
+}
+
+
+
+
 
 body
 {
-background: brown;
+/* background: rgb(220, 205, 205); */
 min-height: 100vh;
 display: flex;
 flex-direction: column;

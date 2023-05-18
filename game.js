@@ -1,6 +1,7 @@
 const wordsection = document.querySelector(".word")
 const boardsection = document.querySelector(".board")
 const figure = document.querySelector(".figure")
+const musiccopadam = document.querySelector(".copadam")
 const letters = [
     "A",
     "B",
