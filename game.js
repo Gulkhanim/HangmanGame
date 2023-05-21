@@ -1,7 +1,15 @@
 const wordsection = document.querySelector(".word")
 const boardsection = document.querySelector(".board")
 const figure = document.querySelector(".figure")
-const musiccopadam = document.querySelector(".copadam")
+const section1 = document.querySelector(".section1")
+const section2 = document.querySelector(".section2")
+const button = document.querySelector(".button")
+const musiccopadam = document.querySelector("#copadam")
+
+button.addEventListener("click", changePage);
+
+
+
 const letters = [
     "A",
     "B",
@@ -37,6 +45,8 @@ const letters = [
     "Z",
 ];
 
+
+
 const human = ["head", "body","rightarm","leftarm","rightleg","leftleg","help"];
 
  
@@ -53,6 +63,18 @@ const createkeyboard=()=>{
     }
 };
 
+function changePage() {
+    const page1 = section1
+    const page2 = section2
+    page1.style.display = "none";
+    page2.style.display = "block";
+    playMusic();
+}
+
+function playMusic() {
+    copadam.play()
+}
+
 const createWord=()=>{
 wordsection.innerHTML=""
 randomword=selectWord();
@@ -64,7 +86,7 @@ square.setAttribute("data-value",randomword[a]);
 wordsection.appendChild(square);
 
 }
-return 
+
 };
 
 const selectWord=()=>{
@@ -119,25 +141,31 @@ const startgame=()=>{
                     if(item.getAttribute("data-value")===chosenletter) {
                         item.textContent = item.getAttribute("data-value");
                         item.classList.add("show")
-                        correctcount++
+                        
                     }
-                })
+                });
+
                 if(correctcount===randomword)
+                
                 {
+                    
                     buttons.forEach(item=>{
                         item.classList.add("close")
                     })
                     squares.forEach(item=>{
+                        item.classList.add("show")
                         item.style.background="green"
                     })
-                   
+                  
                     setTimeout(() => {
-                        startgame();
-                    },2000);
-
-                    selectWord()
+                       
+                        
+                    },2000)
+                    alert("you win")
+                    startgame();
+                    
                 }
-
+               
             }
             else{
                 e.target.classList.add("wrong")
@@ -153,9 +181,13 @@ const startgame=()=>{
                         item.style.background="red"
 
                     })
+                    
                     setTimeout(() => {
-                        startgame();
-                    },2000);
+                       
+                    },2000)
+                    
+                   alert("you lose")
+                    startgame();
                 }
             }
         });

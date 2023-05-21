@@ -9,12 +9,7 @@ font-family: 'Poppins', sans-serif;
 font-size:1.4rem ;
 }
 
-.firstPage{
-    background-image: url("./assets/istockphoto-165812595-612x612.jpg") ;
-    background-size: 110% 115%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+
 
 
 #button {
@@ -31,15 +26,19 @@ font-size:1.4rem ;
     border: none;
     cursor:pointer;
     font-style: italic;
-
+    
 }
 
 .button:hover {
+    width: 120px;
+    height: 50px;
 color: rgb(89, 54, 54);
 background-color: rgb(175, 197, 130);
-width: 7rem;
+/* width: 7rem; */
 box-shadow: 2px 5px rgb(149, 132, 132);
 }
+
+
 
 h1 {
 display: flex;
@@ -73,7 +72,7 @@ display: flex;
 flex-direction: column;
 justify-content: space-around;
 align-items: center;
-color: white;
+/* color: white; */
 }
 
 .game
@@ -83,6 +82,7 @@ color: white;
     align-items: center;
     width: 60%;
     margin: 0px auto;
+  /* background-color: aquamarine; */
    
 }
 
@@ -94,14 +94,17 @@ color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 5px solid black;
+    border: 5px solid rgb(148, 85, 8);
+    border-radius: 0.5rem;
+    margin: 25px;
 }
 
 .word{
-    height: 300px;
-    min-width: 600px;
-/* background: yellow; */
+    height: 250px;
+    min-width: 550px;
+/* background-color: yellow; */
 margin-right: 40px;
+
 }
 
 .figure{
@@ -109,18 +112,20 @@ position: relative;
 height: 300px;
 min-width: 400px;
 /* background: rgb(221, 17, 191); */
+
 }
 
 .board
 {
   margin: 0px auto;
   padding: 0.5rem;
-  min-width: 30vw;
-  min-height: 20vh;
+  max-width: 60vw;
+  max-height: 40vh;
   display: grid;
   grid-template-columns: repeat(10,50px);
-  gap: 10px;  
+  gap: 5px;  
   /* background: pink; */
+  color: brown;
 }
 
 .square
@@ -128,40 +133,45 @@ min-width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid white;
+    border: 2px solid rgb(12, 154, 61);
     width: 50px;
     height: 50px;
-   
+   border-radius: 0.5rem;
+   background-color: rgb(251, 255, 127)
 }
 
 .lettersquare
 {
     width: 50px;
     height: 50px;
-    border: 1px solid white;
+    border: 2px solid rgb(12, 154, 61);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     pointer-events: all;
+    border-radius: 0.5rem;
+    background-color: rgb(251, 255, 127);
 }
 
 .lettersquare:hover
 {
-    background: lightgray;
-    color: brown;
+    /* background:rgb(141, 101, 21); */
+    color: rgb(91, 9, 9);
 }
 
 .wrong
 {
     background: red;
     pointer-events: none;
+    color: goldenrod;
 }
 
 .correct
 {
     background: green;
     pointer-events: none;
+    color: goldenrod;
 }
 
 .close
@@ -171,13 +181,13 @@ min-width: 400px;
 
 .show
 {
-    color: white;
+    color:brown;
 }
 
 .standleg {
     position: absolute;
     left:70px;
-    height: 290px;
+    height: 280px;
     width: 15px;
     background: rgb(100, 124, 52);
 }
@@ -220,7 +230,7 @@ min-width: 400px;
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 3px solid black;
     z-index: 1; 
 
 }
@@ -232,7 +242,7 @@ min-width: 400px;
     transform: translateX(-50%);
     height: 100px;
     width: 4px;
-    border: 2px solid white;
+    border: 2px solid black;
 }
 
 .rightarm
@@ -244,7 +254,7 @@ transform: translateX(-50%)
 rotate(45deg);
 height: 60px;
 width: 4px;
-border: 2px solid white;
+border: 2px solid black;
 }
 
 .leftarm
@@ -256,7 +266,7 @@ border: 2px solid white;
     rotate(-45deg);
     height: 60px;
     width: 4px;
-    border: 2px solid white;  
+    border: 2px solid black;  
 }
 
 .rightleg {
@@ -266,7 +276,7 @@ border: 2px solid white;
     transform: translateX(-50%) rotate(45deg);
     height: 60px;
     width: 4px;
-    border: 2px solid white;
+    border: 2px solid black;
 }
 
 .leftleg
@@ -277,12 +287,6 @@ border: 2px solid white;
     transform: translateX(-50%) rotate(-45deg);
     height: 60px;
     width: 4px;
-    border: 2px solid white;  
+    border: 2px solid black;  
 }
 
-.help
-{
-    position: absolute;
-    color: white;
-    font-size:2rem;
-}
