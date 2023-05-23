@@ -6,7 +6,7 @@ const section2 = document.querySelector(".section2")
 const button = document.querySelector(".button")
 const musiccopadam = document.querySelector("#copadam")
 
-button.addEventListener("click", changePage);
+
 
 
 
@@ -47,7 +47,7 @@ const letters = [
 
 
 
-const human = ["head", "body","rightarm","leftarm","rightleg","leftleg","help"];
+const human = ["head", "body","rightarm","leftarm","rightleg","leftleg"];
 
  
 let randomword = "";
@@ -70,6 +70,8 @@ function changePage() {
     page2.style.display = "block";
     playMusic();
 }
+
+button.addEventListener("click", changePage);
 
 function playMusic() {
     copadam.play()

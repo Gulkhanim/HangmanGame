@@ -19,14 +19,15 @@ font-size:1.4rem ;
     
 }
 .button {
-    
+    position: relative;
     font-size: 2rem;
     color: rgb(129, 112, 35);
     background-color: transparent;
     border: none;
     cursor:pointer;
     font-style: italic;
-    
+    font-weight: bold;
+   
 }
 
 .button:hover {
@@ -34,12 +35,12 @@ font-size:1.4rem ;
     height: 50px;
 color: rgb(89, 54, 54);
 background-color: rgb(175, 197, 130);
-/* width: 7rem; */
+width: 7rem;
 box-shadow: 2px 5px rgb(149, 132, 132);
 }
 
 
-
+ 
 h1 {
 display: flex;
 justify-content: center;
@@ -137,11 +138,14 @@ min-width: 400px;
     width: 50px;
     height: 50px;
    border-radius: 0.5rem;
-   background-color: rgb(251, 255, 127)
+   background-color: rgb(251, 255, 127);
+  
 }
+
 
 .lettersquare
 {
+   
     width: 50px;
     height: 50px;
     border: 2px solid rgb(12, 154, 61);
@@ -152,12 +156,14 @@ min-width: 400px;
     pointer-events: all;
     border-radius: 0.5rem;
     background-color: rgb(251, 255, 127);
+    transition: all;
 }
 
 .lettersquare:hover
 {
     /* background:rgb(141, 101, 21); */
     color: rgb(91, 9, 9);
+    transform: scale(1.2);
 }
 
 .wrong
